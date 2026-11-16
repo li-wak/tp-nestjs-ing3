@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { createObserveModule } from '@nestjs/observe';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { TravelModule } from './travel/travel.module';
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
@@ -14,6 +15,7 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
       appSecret: 'YOUR_APP_SECRET',
       serviceId: 'tp-nestjs-ing3',
     }),
+    TravelModule,
   ],
   controllers: [AppController],
   providers: [AppService],
