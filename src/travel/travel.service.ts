@@ -13,11 +13,11 @@ export class TravelService {
   }
 
   findAll() {
-    return `This action returns all travel`;
+    return this.trips;
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} travel`;
+    return this.trips.find((trip) => trip.id === id);
   }
 
   update(id: number, updateTravelDto: UpdateTravelDto) {
